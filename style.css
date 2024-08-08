@@ -1,0 +1,471 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Defino los estilos globales de la pagina */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    box-sizing: border-box;
+}
+
+/*  El color de fondo de la pagina */
+body{
+    background-color: #F3F5FC;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Defino el margen del main y su comportamiento flex-box */
+main{
+    display: flex;
+    flex: 1; 
+    margin: 2.5rem;
+    gap: 5rem;
+}
+
+/* En esta caja defino lo que es el logo, text-area y los botones   */
+.elementos_izq{    
+    display: flex;
+    flex-direction: column;
+    margin-right: 5rem;
+}
+
+/* Dimensiones del logo*/
+.logo{
+    width: 7.5rem;
+    height: 3rem;
+}
+
+/* Estilo el formulario para que tenga comportamiento flex-box */
+form{
+    display: flex;
+    flex-direction: column;
+    margin-top: 5rem;
+    margin-left: 15rem;
+    gap: 1rem;
+}
+
+/* Dimensiones de la text-area */
+#myForm textarea{ 
+    width: 36.0625rem;  
+    height: 31.25rem;
+    border: none;
+    font-weight: 400; 
+    background-color: #F3F5FC;
+    line-height: 1.5;      
+    color: #0A3871; 
+    font-size: 2rem;
+    outline: none; 
+    overflow: hidden; /* Oculto las barras de desplazamiento */
+    resize: none; /* Desactivo el redimensionamiento manual */ 
+}
+
+/* Defino el placeholder de la text-area */
+form textarea::placeholder{
+    text-align: initial;
+    color: #0A3871;
+}
+
+/* Defino el aviso que va a salir debajo de la text-area con la pseudoclase after */
+.aviso::after{
+    content: url("aviso.svg");
+}
+
+/* Acá le doy estilo a la caja de los botones del formulario y se alinean en fila los botones  */
+.botones{
+    display: flex;
+    width: 42.5rem;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* Estilo los botones del formulario   */
+.botones button{
+    width: 20.5rem;
+    padding: 1.5rem;
+    border-radius: 1.5rem; 
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 400;
+    border: 1px solid #000000;  
+}
+
+/* Utilizo el pseudoclase nth-child para darle estilo al botón de encriptar */
+.botones button:nth-child(1){   
+    background-color: #0A3871;
+    color: #ffffff;
+}
+
+/* Utilizo el pseudoclase nth-child para darle estilo al botón de desencriptar */
+.botones button:nth-child(2){
+    background-color: #D8DFE8;
+    color: #0A3871;
+}
+
+/*  Defino la columna de la derecha que es donde aparecen los elementos iniciales 
+y donde van a salir los nuevos elementos encriptados, y anide dos cajas flex para
+el nuevo comportamiento cuando de click en el boton del formulario */
+.elementos_der{
+    display: flex;
+    flex-direction: column;
+    width: 25rem;
+    background-color: #0670fc;
+    border-radius: 1.5rem;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);    
+    align-items: center;
+}
+
+/* Defino el estilo inicial para el flexbox */
+.elementos_der>.initialFlex {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    background-color: #ffffff;
+    justify-content: center;
+    border-radius: 1.5rem;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Los parrafos de la caja que se muestra a la derecha inicialmente */
+.initialFlex p{
+    color: #000000;
+    margin: 1rem 2rem 0 2rem;    
+    text-align: center;
+}
+
+/* Estilo los parrafos de la caja inicial usando el pseudoclase nth-of-type 
+para darle estilo a los dos primeros parrafos */
+.initialFlex p:nth-of-type(1){
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.initialFlex p:nth-of-type(2){
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+/* Defino el nuevo estilo para la nueva flexbox ya que cuando presiono el boton
+de encriptar o desencriptar, cambia el comportamiento de la caja inicial a la derecha*/
+.elementos_der>.newFlex {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    text-align: start;
+    background-color: #ffffff;
+    border-radius: 1.5rem;
+    flex-direction: column;  
+    box-sizing: border-box;       
+}
+
+/* Estilo el div con el resultado de la encriptacion o desencriptacion */
+.newFlex>#result{    
+    margin: 2rem;
+    overflow: hidden; /* Oculta el desbordamiento */
+    font-size: 1.5rem;  
+    color: #495057; 
+    line-height: 1.5; /* Espacio entre lineas */
+}
+
+/* Defino el tamanio de la imagen del SVG que aparece en la caja inicial a la derecha 
+en el primer renderizado de la pagina */
+.muneco{
+    width: 21rem;
+    height: 20.875rem;
+}
+
+/* Estilo los botones del nuevo flexbox que vendria siendo los estilos del boton copiar */
+.boton {    
+    width: auto;
+    color: #0A3871;
+    box-sizing: border-box; /* Asegura que el padding y el border se incluyan en el ancho total */    
+    height: 4.1875rem;
+    border: 1px solid #0A3871;
+    background-color: #ffffff;
+    padding: 15px;
+    font-size: 1rem;
+    border-radius: 1.5rem;
+    cursor: pointer;
+    margin: 2rem;
+}
+
+/* Estilo el hover de los boton copiar */
+.boton:hover {
+    background-color: #0A3871;
+    color: #ffffff;
+}
+
+/* Estilos para el footer */
+footer {
+    position: relative;
+    background-color: #0A3871;
+    color: #ffffff;
+    margin-top: 5rem;
+    text-align: center;
+    padding: 1.25rem 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-content p {
+    margin: 0.3125rem 0;
+    font-size: 1rem;
+}
+
+.social-icons {
+    margin-top: 0.625rem;
+}
+
+.social-icons a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 0.625rem;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #D8DFE8;
+}
+
+/* Toast de notificaciones*/
+.notifications {
+    position: fixed;
+    top: 1.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    width: 100%;
+    max-width: 31.25rem;
+    text-align: center;
+}
+
+.toast {
+    position: relative;
+    padding: 0.625rem;
+    color: #0A3871;
+    margin-bottom: 0.625rem;
+    width: 25rem;
+    display: grid;
+    grid-template-columns: 4.375rem 1fr 4.375rem;
+    border-radius: 0.3125rem;
+    --color: #0A3871;
+    background-image: linear-gradient(to right, #ffffff , #f0f0f2 30%);
+    animation: show 0.3s ease 1 forwards;
+}
+
+.toast i {
+    color: var(--color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: x-large;
+}
+
+.toast .content {
+    text-align: left;
+}
+
+.toast .title {
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.toast span, .toast i:nth-child(3) {
+    color: #0A3871;
+}
+
+@keyframes show {
+    0% {
+        transform: translateX(100%);
+    }
+    40% {
+        transform: translateX(-5%);
+    }
+    80% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-10%);
+    }
+}
+
+.toast::before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: var(--color);
+    width: 100%;
+    height: 0.1875rem;
+    content: '';
+    box-shadow: 0 0 0.625rem var(--color);
+    animation: timeOut 1.5s linear forwards;
+}
+
+@keyframes timeOut {
+    to {
+        width: 0;
+    }
+}
+
+
+
+
+
+
+/* Estilos para tabletas */
+@media (max-width: 1024px){
+    main {
+        flex-direction: column;
+        margin: 40px;
+        gap: 64px;
+        box-sizing: border-box;
+    }
+
+    .elementos_izq {
+        
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .logo {
+        width: 32px;
+        height: auto;        
+        margin-bottom: 0;
+        margin-right: auto;
+        padding: 0;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;        
+        margin-top: 117px;
+        align-items: center;
+        margin-left: 0;
+        font-size: 3rem;
+        width: 100%;
+        height: 600px;
+        padding:0;
+
+    }
+
+    #myForm textarea {
+        width: 100%;
+        height: 548px;
+        font-size: 1.5rem;
+    }
+
+    .aviso{
+        margin-right: auto;
+    }
+
+    .botones {
+       
+        width: 100%;
+        
+        padding: 0;
+        flex-direction: row;
+        gap: 1.5rem;
+    }
+
+    .botones button {
+        width: 100%;
+    }
+
+    .elementos_der {
+        width: 100%;
+        margin-top: -35px;
+        background-color: #ffffff;
+        height: auto;
+    }
+
+    .elementos_der>.initialFlex {
+        margin: 32px;
+    }
+
+    .muneco {
+        display: none;
+    }
+
+    .newFlex>.boton {
+        width: auto;  
+        height: 67px;
+        font-size: 1rem;
+    }
+
+    footer {
+        margin-top: 40px;
+    }
+
+    .footer-content p {
+        font-size: 1rem;
+    }
+
+    .social-icons a {
+        font-size: 1.5rem;
+    }
+
+    .toast {
+        width: 100%;
+        max-width: auto;
+        grid-template-columns: 50px 1fr 50px;
+    }
+}
+
+
+
+@media (max-width: 768px){
+
+    .botones{
+        flex-direction: column;
+    }
+
+    main{
+        flex-direction: column;
+        margin: 16px;
+    }
+
+    .logo{
+        width: 32px;
+        height: 48px;
+    }
+
+        
+    form{
+        margin-top:56px;
+        height: 500px;
+    }
+   
+
+    .muneco{
+        display: none;
+    }
+
+
+    .toast {
+        position: relative;
+        width: 100%;
+        grid-template-columns: 2rem 1fr 2rem;
+        margin-left: auto;
+    }
+
+    .content *{
+        margin-left: 30px;
+    }
+
+    .notifications {
+        position: fixed;
+        top: 1.25rem;
+        z-index: 1000;
+        width: 100%;
+        max-width: auto;
+        transform: translateX(-40%);
+        text-align: center;
+    }
+
+
+    
+}
