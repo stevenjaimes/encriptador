@@ -9,20 +9,41 @@
 }
 
 /*  El color de fondo de la pagina */
-body{
-    background-color: #F3F5FC;
+
+body, html {    
+    margin: 0;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    background-color: #F3F5FC;
+    min-height: 100vw;
+    
 }
+
+
+/* Estilos para el footer */
+footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    background-color: #0A3871;
+    color: #ffffff;
+    margin-top: 5rem;
+    text-align: center;
+    padding: 1.25rem 0;
+
+}
+
+
 
 /* Defino el margen del main y su comportamiento flex-box */
 main{
     display: flex;
     flex: 1; 
+    justify-content: center;
     margin: 2.5rem;
-    gap: 5rem;
+    gap: 5rem;    
 }
+
 
 /* En esta caja defino lo que es el logo, text-area y los botones   */
 .elementos_izq{    
@@ -198,17 +219,7 @@ en el primer renderizado de la pagina */
     color: #ffffff;
 }
 
-/* Estilos para el footer */
-footer {
-    position: relative;
-    background-color: #0A3871;
-    color: #ffffff;
-    margin-top: 5rem;
-    text-align: center;
-    padding: 1.25rem 0;
-    bottom: 0;
-    width: 100%;
-}
+
 
 .footer-content p {
     margin: 0.3125rem 0;
@@ -324,6 +335,8 @@ footer {
         gap: 64px;
         box-sizing: border-box;
     }
+
+   
 
     .elementos_izq {
         
