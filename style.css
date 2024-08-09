@@ -51,13 +51,13 @@ form{
     display: flex;
     flex-direction: column;
     margin-top: 5rem;
-    margin-left: 15rem;
+    margin-left: 5.55%;
     gap: 1rem;
 }
 
 /* Dimensiones de la text-area */
 #myForm textarea{ 
-    width: 30vw;  /* 50% del ancho del viewport */
+    width: 50vw;  /* 50% del ancho del viewport */
     height: 80vh; /* 70% del alto del viewport */  
     border: none;
     font-weight: 400; 
@@ -118,9 +118,9 @@ el nuevo comportamiento cuando de click en el boton del formulario */
 .elementos_der{
     display: flex;
     flex-direction: column;
-    width: 40%;
+    width: 30%;
     height: auto;
-    background-color: #0670fc;
+    background-color: #fc0606;
     border-radius: 1.5rem;
     box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);    
     align-items: center;
