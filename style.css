@@ -19,9 +19,6 @@ body, html {
     
 }
 
-
-
-
 /* Defino el margen del main y su comportamiento flex-box */
 main{
     display: flex;
@@ -31,7 +28,6 @@ main{
     min-height: 100vh;
        
 }
-
 
 /* En esta caja defino lo que es el logo, text-area y los botones   */
 .elementos_izq{    
@@ -43,7 +39,6 @@ main{
     justify-content: space-between;
 }
 
-
 /*  Defino la columna de la derecha que es donde aparecen los elementos iniciales 
 y donde van a salir los nuevos elementos encriptados, y anide dos cajas flex para
 el nuevo comportamiento cuando de click en el boton del formulario */
@@ -51,13 +46,11 @@ el nuevo comportamiento cuando de click en el boton del formulario */
     display: flex;
     flex-direction: column;
     width: 35%;
-    height: 100vh;
-    background-color: #fc0606;
+    height: auto;
     border-radius: 1.5rem;
     box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);    
     align-items: center;
 }
-
 
 /* Dimensiones del logo*/
 .logo{
@@ -69,9 +62,7 @@ el nuevo comportamiento cuando de click en el boton del formulario */
 form{
     display: flex;
     flex-direction: column;
-    padding-left: 12.5rem;
-    padding-top: 5rem;
-    padding-right: auto;
+    padding-left: 12.5rem;    
     gap: 1rem;
     height: auto;
     width: 100%;
@@ -79,7 +70,7 @@ form{
 
 /* Dimensiones de la text-area */
 #myForm textarea{ 
-    height: 60vh; /* 62% del alto del viewport */ 
+    height: 60vh; /* 60% del alto del viewport */ 
     width: 100%; 
     border: none;
     font-weight: 400; 
@@ -343,10 +334,11 @@ footer {
 @media (max-width: 1024px){
     main {
         flex-direction: column;
-        margin: 40px;
+        margin: 2.5rem;
         gap: 4rem;
         box-sizing: border-box;
-        
+        justify-content: space-between;
+        min-height: 80vh;
     }
 
     .elementos_izq {
@@ -389,7 +381,7 @@ footer {
 
     .botones {       
         width: 100%;
-        
+        height: auto;
         padding: 0;
         flex-direction: row;
         gap: 1.5rem;
@@ -403,7 +395,7 @@ footer {
         display: flex;
         flex-direction: column;
         width: 100%;
-        height: auto;
+        height: fit-content;
         background-color: #ffffff;
     }
 
@@ -450,11 +442,19 @@ footer {
 
     main{
         flex-direction: column;
-        margin: 16px;
-
-        
+        margin: 2rem;
+        align-items: center;
+        justify-content: flex-start;
+        height: auto;
+    }
+    form{
+        height: 800px;
     }
 
+    form textarea{
+        height: 500px;
+    }
+    
     .logo{
         width: 32px;
         height: 48px;
@@ -462,8 +462,8 @@ footer {
 
         
     form{
-        margin-top:56px;
-        height: 500px;
+        margin-top:3.5rem;
+        height: 60%;
     }
    
 
@@ -492,7 +492,5 @@ footer {
         transform: translateX(-40%);
         text-align: center;
     }
-
-
     
 }
