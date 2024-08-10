@@ -167,12 +167,13 @@ fila los botones  */
 para darle estilo a los dos primeros parrafos */
 .initialFlex p:nth-of-type(1){
     font-size: 1.5rem;
-    font-weight: 600;
+    font-weight: 600;    
 }
 
 .initialFlex p:nth-of-type(2){
     font-size: 1rem;
     font-weight: 400;
+    color: #495057;
 }
 
 /* Defino el nuevo estilo para la nueva flexbox ya que cuando presiono el boton
@@ -239,16 +240,18 @@ footer {
 
 }
 
-
+/* margin para los parrafos del contenedor del footer */
 .footer-content p {
     margin: 0.3125rem 0;
     font-size: 1rem;
 }
 
+/* margin para la caja de los iconos del footer */
 .social-icons {
     margin-top: 0.625rem;
 }
 
+/* Estilo los iconos del footer */
 .social-icons a {
     color: var(--color-blanco);
     text-decoration: none;
@@ -274,6 +277,7 @@ footer {
     text-align: center;
 }
 
+/* Estilo el toast */
 .toast {
     position: relative;
     padding: 0.625rem;
@@ -287,6 +291,7 @@ footer {
     animation: show 0.3s ease 1 forwards;
 }
 
+/* Estilo los iconos del toast */
 .toast i {
     color: var(--color-azul);
     display: flex;
@@ -295,19 +300,23 @@ footer {
     font-size: x-large;
 }
 
+/* Estilo el contenido del toast */
 .toast .content {
     text-align: left;
 }
 
+/* Estilo el titulo del toast */
 .toast .title {
     font-size: x-large;
     font-weight: bold;
 }
 
+/* Estilo el span del toast */
 .toast span, .toast i:nth-child(3) {
     color: var(--color-azul);
 }
 
+/* Estilo la animacion del toast */
 @keyframes show {
     0% {
         transform: translateX(100%);
@@ -323,6 +332,7 @@ footer {
     }
 }
 
+/* Estilo la animacion de la barra de tiempo */
 .toast::before {
     position: absolute;
     bottom: 0;
@@ -335,6 +345,7 @@ footer {
     animation: timeOut 1.5s linear forwards;
 }
 
+/* Estilo la animacion de la barra de tiempo */
 @keyframes timeOut {
     to {
         width: 0;
@@ -457,6 +468,18 @@ footer {
         height: auto;
         gap:1rem;
     }
+
+   
+    .elementos_der>.initialFlex {        
+        height: 20%;
+        width: auto;
+        margin: 1rem;
+    }
+
+    .elementos_der{
+        background-color: #ffffff;
+    }
+
     form{
         height: 750px;
     }
