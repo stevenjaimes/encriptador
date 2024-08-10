@@ -7,6 +7,7 @@ Encriptado es una herramienta simple pero poderosa para encriptar y desencriptar
 
 
 🚀 Características
+
 Encriptación segura utilizando algoritmos robustos.
 Desencriptación fácil para recuperar tus mensajes.
 Interfaz amigable y fácil de usar.
@@ -15,12 +16,14 @@ Compatibilidad cross-platform (Windows, Mac, Linux).
 
 
 🛠️ Tecnologías Utilizadas
+
 Lenguaje: Javascript
 Estilos: CSS
 Versionado: Git
 
 
 🔧 Instalación
+
 Clona el repositorio:
 
 git clone https://github.com/stevenjaimes/encriptador.git
@@ -33,6 +36,7 @@ Plugin: Go Live
 
 
 📷 Capturas de Pantalla
+
 ¡Mira cómo luce! 👇
 
 <p align="center">
@@ -42,6 +46,7 @@ Plugin: Go Live
 
 
 💻 Uso
+
 Encriptar un mensaje:
 
 Escribe o carga tu mensaje en el campo de texto.
@@ -56,6 +61,7 @@ Da click en "Desencriptar" para ver el mensaje original.
 
 
 🧑‍💻 Contribución
+
 Las contribuciones son bienvenidas. Siéntete libre de abrir un issue o enviar un pull request.
 
 Haz un fork del proyecto.
@@ -65,10 +71,12 @@ Envía un pull request.
 
 
 📄 Licencia
+
 Este proyecto está bajo la licencia MIT. Consulta el archivo LICENSE para más detalles.
 
 
 🌐 Contacto
+
 Nombre: Henry Steeven Jaimes Bastos
 Correo: hensteve250@gmail.com
 LinkedIn: linkedin.com/in/steven-jaimes-0767a2205/
