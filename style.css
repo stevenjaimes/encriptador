@@ -37,9 +37,9 @@ main{
 .elementos_izq{    
     display: flex;
     flex-direction: column;
-    background-color: #fc0606;  
+    background-color: #ffffff;  
     width: 65%;  
-    height: 90vh;
+    height: 100vh;
     justify-content: space-between;
 }
 
