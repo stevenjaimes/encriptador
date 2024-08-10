@@ -13,26 +13,26 @@
 9. 📜 [Licencia](#Licencia)
 10. 🌐 [Contacto](#Contacto)
 
-## 📜 Descripción
+# 📜 Descripción
 
 Encriptado es una herramienta simple pero poderosa para encriptar y desencriptar mensajes, diseñada para proteger tu información confidencial. 
 
 
-## 🚀 Características
+# 🚀 Características
 
 Encriptación segura utilizando algoritmos robustos.
 Desencriptación fácil para recuperar tus mensajes.
 Interfaz amigable y fácil de usar.
 
 
-## 🛠️ Tecnologías Utilizadas
+# 🛠️ Tecnologías Utilizadas
 
 Lenguaje: Javascript
 Estilos: CSS
 Versionado: Git
 
 
-## 🔧 Clona el repositorio
+# 🔧 Clona el repositorio
 
  ```bash
    git clone https://github.com/stevenjaimes/encriptador.git
@@ -40,17 +40,21 @@ Versionado: Git
    ```
 
 
-## 📷 Capturas de Pantalla
+# 📷 Capturas de Pantalla
 
-¡Mira cómo luce! 👇
+### ¡Mira cómo luce! 👇
 
 <div align="center">
+  <h2 align="center">Encriptado</h2>
   <img src="/assets/pantallazo1.png" alt="Seguridad encriptado en acción" width="100%"/>
+  <h2 align="center">Desencriptado</h2>
   <img src="/assets/pantallazo2.png" alt="Interfaz Seguridad Encriptado" width="100%"/>
-</dvi>
+  <h2 align="center">Diseño Responsivo</h2>
+  <img src="/assets/pantallazo2.png" alt="Interfaz Seguridad Encriptado" width="100%"/>
+</div>
 
 
-## 🚀 Uso
+# 🚀 Uso
 
 ### Encriptar un mensaje:
 
@@ -68,7 +72,7 @@ Pegalo en la caja de texto
 
 Da click en "Desencriptar" para ver el mensaje original.
 
-## 🌠 Funciones de Javascript Utilizadas
+# 🌠 Funciones de Javascript Utilizadas
 
 ### Funciones para encriptar y desencriptar texto usando expresiones regulares
 ```javascript
