@@ -3,7 +3,7 @@
 
 📜 Descripción
 
-Encriptado es una herramienta simple pero poderosa para encriptar y desencriptar mensajes, diseñada para proteger tu información confidencial. Con una interfaz amigable y un alto nivel de seguridad, SecureCrypt es la solución perfecta para quienes buscan una manera confiable de mantener su información a salvo.
+Encriptado es una herramienta simple pero poderosa para encriptar y desencriptar mensajes, diseñada para proteger tu información confidencial. 
 
 
 🚀 Características
@@ -11,8 +11,6 @@ Encriptado es una herramienta simple pero poderosa para encriptar y desencriptar
 Encriptación segura utilizando algoritmos robustos.
 Desencriptación fácil para recuperar tus mensajes.
 Interfaz amigable y fácil de usar.
-Soporte para múltiples formatos de entrada (texto plano, archivos).
-Compatibilidad cross-platform (Windows, Mac, Linux).
 
 
 🛠️ Tecnologías Utilizadas
