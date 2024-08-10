@@ -8,15 +8,21 @@
     box-sizing: border-box;
 }
 
-/*  El color de fondo de la pagina */
+/* Defino las variable css para los colores */
+:root{
+    --color-fondo: #F3F5FC;
+    --color-azul: #0A3871; 
+    --color-blanco: #ffffff;
+    --color-negro: #000000;    
+}
+
+
+/* Configuracion del body y html */
 
 body, html {    
-    margin: 0;
     display: flex;
     flex-direction: column;
-    background-color: #F3F5FC;
-    
-    
+    background-color: var(--color-fondo);        
 }
 
 /* Defino el margen del main y su comportamiento flex-box */
@@ -33,15 +39,14 @@ main{
 .elementos_izq{    
     display: flex;
     flex-direction: column;
-    background-color: #F3F5FC;  
+    background-color: var(--color-fondo);  
     width: 65%;  
     height: 100vh;
     justify-content: space-between;
 }
 
 /*  Defino la columna de la derecha que es donde aparecen los elementos iniciales 
-y donde van a salir los nuevos elementos encriptados, y anide dos cajas flex para
-el nuevo comportamiento cuando de click en el boton del formulario */
+y tambien saldra la nueva caja con el texto encriptado o desencriptado  */
 .elementos_der{
     display: flex;
     flex-direction: column;
@@ -58,7 +63,8 @@ el nuevo comportamiento cuando de click en el boton del formulario */
     height: 3rem;
 }
 
-/* Estilo el formulario para que tenga comportamiento flex-box */
+/* Estilo el formulario para que tenga comportamiento flex-box, quise usar formulario
+aunque sé que no es necesario, solo es costumbre */
 form{
     display: flex;
     flex-direction: column;
@@ -74,9 +80,9 @@ form{
     width: 100%; 
     border: none;
     font-weight: 400; 
-    background-color: #F3F5FC;
+    background-color: var(--color-fondo);
     line-height: 1.5;      
-    color: #0A3871; 
+    color: var(--color-azul); 
     font-size: 2rem;
     outline: none; 
     overflow: hidden; /* Oculto las barras de desplazamiento */
@@ -86,15 +92,16 @@ form{
 /* Defino el placeholder de la text-area */
 form textarea::placeholder{
     text-align: initial;
-    color: #0A3871;
+    color: var(--color-azul);
 }
 
 /* Defino el aviso que va a salir debajo de la text-area con la pseudoclase after */
 .aviso::after{
-    content: url("aviso.svg");
+    content: url("/assets/aviso.svg");
 }
 
-/* Acá le doy estilo a la caja de los botones del formulario y se alinean en fila los botones  */
+/* Acá le doy estilo a la caja de los botones del formulario y se alinean en 
+fila los botones  */
 .botones{
     display: flex;
     width: 100%;
@@ -111,28 +118,38 @@ form textarea::placeholder{
     cursor: pointer;
     font-size: 1rem;
     font-weight: 400;
-    border: 1px solid #000000;  
+    border: 1px solid var(--color-negro);  
 }
 
 /* Utilizo el pseudoclase nth-child para darle estilo al botón de encriptar */
 .botones button:nth-child(1){   
-    background-color: #0A3871;
-    color: #ffffff;
+    background-color: var(--color-azul);
+    color: var(--color-blanco);
 }
+
+.botones button:hover:nth-child(1){   
+    background-color: #438ff3;
+    color: var(--color-blanco);
+}
+
 
 /* Utilizo el pseudoclase nth-child para darle estilo al botón de desencriptar */
 .botones button:nth-child(2){
     background-color: #D8DFE8;
-    color: #0A3871;
+    color: var(--color-azul);
 }
 
+.botones button:hover:nth-child(2){
+    background-color: #bdc2c8;
+    color: var(--color-azul);
+}
 
-/* Defino el estilo inicial para el flexbox */
+/* Defino el estilo de la caja inicial para el flexbox */
 .elementos_der>.initialFlex {
     display: flex;
     width: 100%;
     height: 100%;
-    background-color: #ffffff;
+    background-color: var(--color-blanco);
     justify-content: center;
     border-radius: 1.5rem;
     align-items: center;
@@ -141,7 +158,7 @@ form textarea::placeholder{
 
 /* Los parrafos de la caja que se muestra a la derecha inicialmente */
 .initialFlex p{
-    color: #000000;
+    color: var(--color-negro);
     margin: 1rem 2rem 0 2rem;    
     text-align: center;
 }
@@ -166,7 +183,7 @@ de encriptar o desencriptar, cambia el comportamiento de la caja inicial a la de
     height: 100%;
     justify-content: space-between;
     text-align: start;
-    background-color: #ffffff;
+    background-color: var(--color-blanco);
     border-radius: 1.5rem;
     flex-direction: column;  
     box-sizing: border-box;       
@@ -190,14 +207,14 @@ pantallas extragrandes*/
     height: auto;
 }
 
-/* Estilo los botones del nuevo flexbox que vendria siendo los estilos del boton copiar */
+/* Estilo la caja del boton que sale con el texto encriptado o desencriptado, el 
+boton copiar */
 .boton {    
     width: auto;
-    color: #0A3871;
-    box-sizing: border-box; /* Asegura que el padding y el border se incluyan en el ancho total */    
+    color: var(--color-azul);
     height: 4.1875rem;
-    border: 1px solid #0A3871;
-    background-color: #ffffff;
+    border: 1px solid var(--color-azul);
+    background-color: var(--color-blanco);
     padding: 15px;
     font-size: 1rem;
     border-radius: 1.5rem;
@@ -207,17 +224,16 @@ pantallas extragrandes*/
 
 /* Estilo el hover de los boton copiar */
 .boton:hover {
-    background-color: #0A3871;
-    color: #ffffff;
+    background-color: var(--color-azul);
+    color: var(--color-blanco);
 }
-
 
 /* Estilos para el footer */
 footer {
     position: relative;    
     width: 100%;
-    background-color: #0A3871;
-    color: #ffffff;
+    background-color: var(--color-azul);
+    color: var(--color-blanco);
     text-align: center;
     padding: 1.25rem 0;
 
@@ -234,12 +250,13 @@ footer {
 }
 
 .social-icons a {
-    color: #ffffff;
+    color: var(--color-blanco);
     text-decoration: none;
     margin: 0 0.625rem;
     font-size: 1.5rem;
     transition: color 0.3s ease;
 }
+
 
 .social-icons a:hover {
     color: #D8DFE8;
@@ -260,19 +277,18 @@ footer {
 .toast {
     position: relative;
     padding: 0.625rem;
-    color: #0A3871;
+    color: var(--color-azul);
     margin-bottom: 0.625rem;
     width: 25rem;
     display: grid;
     grid-template-columns: 4.375rem 1fr 4.375rem;
     border-radius: 0.3125rem;
-    --color: #0A3871;
-    background-image: linear-gradient(to right, #ffffff , #f0f0f2 30%);
+    background-image: linear-gradient(to right, var(--color-blanco) , #f0f0f2 30%);
     animation: show 0.3s ease 1 forwards;
 }
 
 .toast i {
-    color: var(--color);
+    color: var(--color-azul);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -289,7 +305,7 @@ footer {
 }
 
 .toast span, .toast i:nth-child(3) {
-    color: #0A3871;
+    color: var(--color-azul);
 }
 
 @keyframes show {
@@ -311,11 +327,11 @@ footer {
     position: absolute;
     bottom: 0;
     left: 0;
-    background-color: var(--color);
+    background-color: var(--color-azul);
     width: 100%;
     height: 0.1875rem;
     content: '';
-    box-shadow: 0 0 0.625rem var(--color);
+    box-shadow: 0 0 0.625rem var(--color-azul);
     animation: timeOut 1.5s linear forwards;
 }
 
@@ -328,10 +344,9 @@ footer {
 
 
 
-
-
 /* Estilos para tabletas */
 @media (max-width: 1024px){
+
     main {
         flex-direction: column;
         margin: 2.5rem;
@@ -343,26 +358,28 @@ footer {
 
     .elementos_izq {
         width: 100%;
-        margin-top: 0;
-        margin-right: 0;
-        margin-left: 0;
+        margin: 0 0 auto 0;
         height: auto;
+    }
+
+    
+    .elementos_der {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
     }
 
     .logo {
         width: 32px;
         height: auto;        
-        margin-bottom: 0;
-        margin-right: auto;
-        padding: 0;
+        margin: 0 auto 0 0;
     }
 
     form {
         display: flex;
         flex-direction: column;        
-        margin-top: 117px;
+        margin-top: 7.3125rem;
         align-items: center;
-        margin-left: 0;
         font-size: 3rem;
         width: 100%;
         height: auto;
@@ -389,14 +406,6 @@ footer {
 
     .botones button {
         width: 100%;
-    }
-
-    .elementos_der {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        height: fit-content;
-        background-color: #ffffff;
     }
 
     .elementos_der>.initialFlex {
@@ -433,7 +442,7 @@ footer {
 }
 
 
-
+/* Estilos para celulares */
 @media (max-width: 768px){
 
     .botones{
@@ -442,18 +451,16 @@ footer {
 
     main{
         flex-direction: column;
-        margin: 2rem;
+        margin: 1rem;
         align-items: center;
         justify-content: flex-start;
         height: auto;
+        gap:1rem;
     }
     form{
-        height: 800px;
+        height: 750px;
     }
 
-    form textarea{
-        height: 500px;
-    }
     
     .logo{
         width: 32px;
@@ -464,12 +471,7 @@ footer {
     form{
         margin-top:3.5rem;
         height: 60%;
-    }
-   
-
-    .muneco{
-        display: none;
-    }
+    }   
 
 
     .toast {
