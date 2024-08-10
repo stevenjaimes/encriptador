@@ -122,13 +122,13 @@ fila los botones  */
 }
 
 /* Utilizo el pseudoclase nth-child para darle estilo al botón de encriptar */
-.botones button:nth-child(1){   
+.botones button:nth-child(1), .botones button:active:nth-child(1){   
     background-color: var(--color-azul);
     color: var(--color-blanco);
 }
 
 .botones button:hover:nth-child(1){   
-    background-color: #438ff3;
+    background-color: #011a3b;
     color: var(--color-blanco);
 }
 
