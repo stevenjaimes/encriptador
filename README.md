@@ -45,18 +45,22 @@ Plugin: Go Live
 </p>
 
 
-💻 Uso
+💻 <strong>Uso</strong>
 
-Encriptar un mensaje:
+<strong>Encriptar un mensaje:</strong>
 
 Escribe o carga tu mensaje en el campo de texto.
+
 Haz clic en "Encriptar".
+
 ¡Listo! Tu mensaje ahora está seguro.
 
-Desencriptar un mensaje:
+<strong>Desencriptar un mensaje:</strong>
 
 Copia el mensaje encriptado.
+
 Pegalo en la caja de texto
+
 Da click en "Desencriptar" para ver el mensaje original.
 
 
@@ -65,8 +69,11 @@ Da click en "Desencriptar" para ver el mensaje original.
 Las contribuciones son bienvenidas. Siéntete libre de abrir un issue o enviar un pull request.
 
 Haz un fork del proyecto.
+
 Crea una nueva rama (git checkout -b mi-nueva-rama).
+
 Realiza tus cambios.
+
 Envía un pull request.
 
 
@@ -78,7 +85,10 @@ Este proyecto está bajo la licencia MIT. Consulta el archivo LICENSE para más 
 🌐 Contacto
 
 Nombre: Henry Steeven Jaimes Bastos
+
 Correo: hensteve250@gmail.com
+
 LinkedIn: linkedin.com/in/steven-jaimes-0767a2205/
+
 GitHub: github.com/stevenjaimes
 

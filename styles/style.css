@@ -97,7 +97,7 @@ form textarea::placeholder{
 
 /* Defino el aviso que va a salir debajo de la text-area con la pseudoclase after */
 .aviso::after{
-    content: url("/assets/aviso.svg");
+    content: url("../assets/aviso.svg");
 }
 
 /* Acá le doy estilo a la caja de los botones del formulario y se alinean en 
