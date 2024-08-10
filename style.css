@@ -27,7 +27,7 @@ main{
     display: flex;
     justify-content: center;
     margin: 2.5rem;
-    gap: 5rem; 
+    gap: 5.5%; 
     min-height: 100vh;
        
 }
@@ -37,7 +37,7 @@ main{
 .elementos_izq{    
     display: flex;
     flex-direction: column;
-    background-color: #ffffff;  
+    background-color: #F3F5FC;  
     width: 65%;  
     height: 100vh;
     justify-content: space-between;
@@ -79,7 +79,7 @@ form{
 
 /* Dimensiones de la text-area */
 #myForm textarea{ 
-    height: 67vh; /* 62% del alto del viewport */ 
+    height: 60vh; /* 62% del alto del viewport */ 
     width: 100%; 
     border: none;
     font-weight: 400; 
