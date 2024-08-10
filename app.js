@@ -5,8 +5,13 @@ document.addEventListener("DOMContentLoaded", () => {
   const initialFlexDiv = document.querySelector(".initialFlex");
   const newFlexDiv = document.querySelector(".newFlex");
   const resultDiv = document.getElementById("result");
+  const textarea = document.getElementById("textarea");
 
-  // Función para encriptar
+  // Expresión regular para validar solo letras minúsculas y espacios
+  const validacionRegex = /^[a-z\s]+$/;
+
+  // Función para encriptar usada con expresiones regulares y el modificador
+  // g (global)
   function encriptar(text) {
     return text
       .replace(/e/g, "enter")
@@ -16,7 +21,8 @@ document.addEventListener("DOMContentLoaded", () => {
       .replace(/u/g, "ufat");
   }
 
-  // Función para desencriptar
+  // Función para desencriptar usada con expresiones regulares y el modificador
+  // g (global)
   function desencriptar(text) {
     return text
       .replace(/enter/g, "e")
@@ -26,20 +32,35 @@ document.addEventListener("DOMContentLoaded", () => {
       .replace(/ufat/g, "u");
   }
 
+  // Validar el contenido del textarea
+  function validarTexto(text) {
+    return validacionRegex.test(text);
+  }
+
   // Evento para el botón Encriptar
   encriptarButton.addEventListener("click", (e) => {
     e.preventDefault();
-    const textareaValor = document.getElementById("textarea").value;
-    const textoEncriptado = encriptar(textareaValor);
-    mostrarResultado(textoEncriptado);
+    const textareaValor = textarea.value;
+
+    if (validarTexto(textareaValor)) {
+      const textoEncriptado = encriptar(textareaValor);
+      mostrarResultado(textoEncriptado);
+    } else {
+      alert("El texto contiene mayúsculas o caracteres especiales no permitidos.");
+    }
   });
 
   // Evento para el botón Desencriptar
   desencriptarButton.addEventListener("click", (e) => {
     e.preventDefault();
-    const textareaValue = document.getElementById("textarea").value;
-    const textoDesencriptado = desencriptar(textareaValue);
-    mostrarResultado(textoDesencriptado);
+    const textareaValue = textarea.value;
+
+    if (validarTexto(textareaValue)) {
+      const textoDesencriptado = desencriptar(textareaValue);
+      mostrarResultado(textoDesencriptado);
+    } else {
+      alert("El texto contiene mayúsculas o caracteres especiales no permitidos.");
+    }
   });
 
   // Función para mostrar el resultado y cambiar la vista
@@ -81,6 +102,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }, 500);
     }, 1500);
   }
+
   // Funcionalidad del botón copiar
   const copyButton = document.getElementById("copyButton");
   copyButton.addEventListener("click", function () {
