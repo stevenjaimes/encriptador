@@ -1,51 +1,58 @@
-🛡️ Encriptado: Tu herramienta de Encriptación personal
+## 🛡️ Encriptador: Tu herramienta de Encriptación personal
 
+## 📋 Tabla de contenido
 
-📜 Descripción
+1. 📜 [Introduction](#Descripción)
+2. 🔋  [Catacterísticas](#Características)
+3. 🛠️ [Tecnologías utilizada](#TecnologíasUtilizadas)
+4. 🔧 [Clona el repositorio](#Clona)
+5. 📷 [Capturas de pantalla](#Capturas)
+6. 🚀 [Como se usa](#Uso)
+7. 🌠 [Funciones de Javascript](#Funciones)
+8. 🤝 [Contribución](#Contribución)
+9. 📜 [Licencia](#Licencia)
+10. 🌐 [Contacto](#Contacto)
+
+## 📜 Descripción
 
 Encriptado es una herramienta simple pero poderosa para encriptar y desencriptar mensajes, diseñada para proteger tu información confidencial. 
 
 
-🚀 Características
+## 🚀 Características
 
 Encriptación segura utilizando algoritmos robustos.
 Desencriptación fácil para recuperar tus mensajes.
 Interfaz amigable y fácil de usar.
 
 
-🛠️ Tecnologías Utilizadas
+## 🛠️ Tecnologías Utilizadas
 
 Lenguaje: Javascript
 Estilos: CSS
 Versionado: Git
 
 
-🔧 Instalación
+## 🔧 Clona el repositorio
 
-Clona el repositorio:
-
-git clone https://github.com/stevenjaimes/encriptador.git
-cd tu_proyecto
-
-
-Ejecuta la aplicación:
-
-Plugin: Go Live
+ ```bash
+   git clone https://github.com/stevenjaimes/encriptador.git
+   cd encriptador
+   ```
 
 
-📷 Capturas de Pantalla
+## 📷 Capturas de Pantalla
 
 ¡Mira cómo luce! 👇
 
-<p align="center">
-  <img src="/assets/pantallazo1.png" alt="Seguridad encriptado en acción" width="400"/>
-  <img src="/assets/pantallazo2.png" alt="Interfaz Seguridad Encriptado" width="400"/>
-</p>
+<div align="center">
+  <img src="/assets/pantallazo1.png" alt="Seguridad encriptado en acción" width="100%"/>
+  <img src="/assets/pantallazo2.png" alt="Interfaz Seguridad Encriptado" width="100%"/>
+</dvi>
 
 
-💻 <strong>Uso</strong>
+## 🚀 Uso
 
-<strong>Encriptar un mensaje:</strong>
+### Encriptar un mensaje:
 
 Escribe o carga tu mensaje en el campo de texto.
 
@@ -53,7 +60,7 @@ Haz clic en "Encriptar".
 
 ¡Listo! Tu mensaje ahora está seguro.
 
-<strong>Desencriptar un mensaje:</strong>
+### Desencriptar un mensaje:
 
 Copia el mensaje encriptado.
 
@@ -61,8 +68,41 @@ Pegalo en la caja de texto
 
 Da click en "Desencriptar" para ver el mensaje original.
 
+## 🌠 Funciones de Javascript Utilizadas
 
-🧑‍💻 Contribución
+### Funciones para encriptar y desencriptar texto usando expresiones regulares
+```javascript
+function encriptar(text) {
+    return text
+      .replace(/e/g, "enter")
+      .replace(/i/g, "imes")
+      .replace(/a/g, "ai")
+      .replace(/o/g, "ober")
+      .replace(/u/g, "ufat");
+  }
+
+  // Función para desencriptar usada con expresiones regulares y el modificador
+  // g (global)
+  function desencriptar(text) {
+    return text
+      .replace(/enter/g, "e")
+      .replace(/imes/g, "i")
+      .replace(/ai/g, "a")
+      .replace(/ober/g, "o")
+      .replace(/ufat/g, "u");
+  }
+```
+
+### Funciones para validar los datos usando regex
+```javascript
+const validacionRegex = /^[a-z\s]+$/;
+ // Validar el contenido del textarea
+  function validarTexto(text) {
+    return validacionRegex.test(text);
+  }
+```
+
+## 🧑‍💻 Contribución
 
 Las contribuciones son bienvenidas. Siéntete libre de abrir un issue o enviar un pull request.
 
@@ -80,7 +120,7 @@ Envía un pull request.
 Este proyecto está bajo la licencia MIT. Consulta el archivo LICENSE para más detalles.
 
 
-🌐 Contacto
+## 🌐 Contacto
 
 Nombre: Henry Steeven Jaimes Bastos
 
